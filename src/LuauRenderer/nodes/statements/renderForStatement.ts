@@ -7,7 +7,7 @@ export function renderForStatement(state: RenderState, node: luau.ForStatement) 
 	const expStr = render(state, node.expression);
 
 	let result = "";
-	result += state.line(`for ${idsStr} in ${expStr} do`);
+	result += state.line(`for ${idsStr} in ${expStr} do`, node);
 	result += state.block(() => renderStatements(state, node.statements));
 	result += state.line(`end`);
 

@@ -4,7 +4,7 @@ import { renderStatements } from "LuauRenderer/util/renderStatements";
 
 export function renderWhileStatement(state: RenderState, node: luau.WhileStatement) {
 	let result = "";
-	result += state.line(`while ${render(state, node.condition)} do`);
+	result += state.line(`while ${render(state, node.condition)} do`, node);
 	result += state.block(() => renderStatements(state, node.statements));
 	result += state.line(`end`);
 	return result;

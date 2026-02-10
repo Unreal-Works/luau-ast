@@ -5,5 +5,5 @@ export function renderReturnStatement(state: RenderState, node: luau.ReturnState
 	const expStr = luau.list.isList(node.expression)
 		? luau.list.mapToArray(node.expression, exp => render(state, exp)).join(", ")
 		: render(state, node.expression);
-	return state.line(`return ${expStr}`);
+	return state.line(`return ${expStr}`, node);
 }

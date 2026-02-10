@@ -1,5 +1,5 @@
 {
-	"name": "@roblox-ts/luau-ast",
+	"name": "@infh/luau-ast",
 	"version": "2.0.1",
 	"description": "Luau AST + Renderer for roblox-ts",
 	"main": "out/LuauAST/index.js",

@@ -5,7 +5,7 @@ import { renderStatements } from "LuauRenderer/util/renderStatements";
 export function renderIfStatement(state: RenderState, node: luau.IfStatement) {
 	let result = "";
 
-	result += state.line(`if ${render(state, node.condition)} then`);
+	result += state.line(`if ${render(state, node.condition)} then`, node);
 	result += state.block(() => renderStatements(state, node.statements));
 
 	let currentElseBody = node.elseBody;
